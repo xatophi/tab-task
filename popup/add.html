@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Add to Task</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+
+
+    <style>
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            background-color: #2684FC;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2683fce4;
+        }
+
+        div {
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        label {
+            margin: 0 2px;
+            font-size: 90%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 400px;
+            background-color: #f9f9f9;
+        }
+    </style>
+
+
+    <script src="functions.js"></script>
+
+    <div>
+        <label for="listsel">Task list</label>
+        <select name="list" id="listsel">
+        </select>
+        <label for="titlein">Title</label>
+        <input type="text" placeholder="title" id="titlein">
+        <button id="addbtn">Add</button>
+    </div>
+
+    <script src="add.js"></script>
+
+</body>
+
+</html>

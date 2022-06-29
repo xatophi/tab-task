@@ -1,0 +1,1 @@
+document.getElementById('clearbtn').addEventListener('click', e => browser.storage.local.clear())
