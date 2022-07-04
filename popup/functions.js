@@ -1,5 +1,6 @@
 
-const REDIRECT_URL = browser.identity.getRedirectURL();
+const REDIRECT_URL = 'http://127.0.0.1/mozoauth2/' + /https:\/\/([a-z0-9]+)\.extensions/.exec(browser.identity.getRedirectURL())[1];
+//const CLIENT_ID = "446792787610-35ufr155kprgilhbde9jdgeb9a8ugda3.apps.googleusercontent.com";
 const CLIENT_ID = "446792787610-70gjrpv0889qkvr39a0uqmv7tamllt13.apps.googleusercontent.com";
 const SCOPES = ["https://www.googleapis.com/auth/tasks", "https://www.googleapis.com/auth/tasks.readonly"];
 
@@ -9,7 +10,6 @@ const AUTH_URL =
 &response_type=token\
 &redirect_uri=${encodeURIComponent(REDIRECT_URL)}\
 &scope=${encodeURIComponent(SCOPES.join(' '))}`;
-
 
 async function getNewToken() {
     console.log('Asking for a new token')
